@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 
 import { Container, Label } from './styles';
+import BoardContext from '../Board/context';
 
 export default function Card({ data, index }) {
   const ref = useRef();
+  const { move } = useContext(BoardContext);
 
   const [{ isDragging }, dragRef] = useDrag({
     item: { type: 'CARD', index },
@@ -37,8 +39,9 @@ export default function Card({ data, index }) {
         return;
       }
 
-      console.log('oi')
+      move(draggedIndex, targetIndex);
 
+      // console.log('oi')
     }
   });
 
