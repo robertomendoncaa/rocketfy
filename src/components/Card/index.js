@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDrag } from 'react-dnd';
+import { useDrag, useDrop } from 'react-dnd';
 
 import { Container, Label } from './styles';
 
@@ -9,6 +9,13 @@ export default function Card({ data }) {
     collect: monitor => ({
       isDragging: monitor.isDragging(),
     }),
+  });
+
+  const [, dropRef] = useDrop({
+    accept: 'CARD',
+    hover(item, monitor) {
+
+    }
   });
 
   return (
