@@ -10,7 +10,7 @@ export default function Header() {
 
       <Notification>
         <Badge>
-          <MdNotificationsNone size={28} color="rgba(255, 255, 255, 0.7)" />
+          1 <MdNotificationsNone size={24} color="rgba(255, 255, 255, 0.7)" />
         </Badge>
         <Profile>
           <img src="https://avatars0.githubusercontent.com/u/20547884?v=4" alt="avatar"/>

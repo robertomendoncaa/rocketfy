@@ -18,20 +18,25 @@ export const Notification = styled.div`
 `;
 
 export const Badge = styled.button`
-  background: none;
+  background: #ff4e4e;
+  border-radius: 4px;
   border: 0;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 5px 10px;
   margin-right: 5px;
   transition: opacity 0.2s;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.9;
   }
 `;
 
 export const Profile = styled.div`
   display: flex;
   align-items: center;
-  padding: 7px;
+  padding: 5px;
   transition: background 0.2s;
 
   &:hover {
